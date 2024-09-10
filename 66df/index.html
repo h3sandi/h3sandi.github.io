@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>programming project 1</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<header>
+		<h1 id="title">programming project 1</h1>
+	</header>
+	<main>
+		<p>The search algorithm is quite fast, taking only seconds to run, while the main choking points of the entire program involve the I/O heavy tasks irrelevant to the algorithm itself. The overarching idea is to find the appropriate offsets of channels relative to the baseline (channel B in this case).</p>
+		<p>To speed up the search, an image pyramid was employed, with each layer scaled down from the previous one, until both sides become shorter than 64 px. Then, given the rough estimate of the optimum, we run the NCC with the all four possible combinations adding to the original estimate: <code>(0, 0)</code>, <code>(0, 1)</code>, <code>(1, 0)</code>, <code>(1, 1)</code>.</p>
+		<p>The algorithm works well on most cases, except for the two, <code>cathedral.jpg</code> and <code>emir.tif</code>, perhaps due to the imbalance of brightness distribution in each channel.</p>
+		<p>
+			<img src="./code/output/cathedral.jpg" alt="cathedral" width="512">
+			<figcaption>&lt;OFFSET_G&gt; &lt;OFFSET_R&gt;</figcaption>
+			<figcaption>[ 10 151 ] [ 18 151 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/church.jpg" alt="church" width="512">
+			<figcaption>[ 32 8 ] [ 64 0 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/emir.jpg" alt="emir" width="512">
+			<figcaption>[ 64 32 ] [ 1178 1179 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/harvesters.jpg" alt="harvesters" width="512">
+			<figcaption>[ 64 32 ] [ 128 16 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/icon.jpg" alt="icon" width="512">
+			<figcaption>[ 64 32 ] [ 96 32 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/lady.jpg" alt="lady" width="512">
+			<figcaption>[ 64 8 ] [ 128 16 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/melons.jpg" alt="melons" width="512">
+			<figcaption>[ 96 16 ] [ 192 32 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/monastery.jpg" alt="monastery" width="512">
+			<figcaption>[ 0 4 ] [ 4 4 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/onion_church.jpg" alt="onion church" width="512">
+			<figcaption>[ 64 32 ] [ 128 64 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/sculpture.jpg" alt="sculpture" width="512">
+			<figcaption>[ 34 0 ] [ 144 0 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/self_portrait.jpg" alt="self portrait" width="512">
+			<figcaption>[ 80 32 ] [ 192 64 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/three_generations.jpg" alt="three generations" width="512">
+			<figcaption>[ 64 16 ] [ 128 16 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/tobolsk.jpg" alt="tobolsk" width="512">
+			<figcaption>[ 4 4 ] [ 8 5 ]</figcaption>
+		</p>
+		<p>
+			<img src="./code/output/train.jpg" alt="train" width="512">
+			<figcaption>[ 64 8 ] [ 128 33 ]</figcaption>
+		</p>
+	</main>
+</body>
+</html>
